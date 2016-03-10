@@ -18,25 +18,11 @@ angular
     'ngTouch',
     'ui.router'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    // $routeProvider
-    //   .when('/', {
-    //     templateUrl: 'views/main.html',
-    //     controller: 'MainCtrl',
-    //     controllerAs: 'main'
-    //   })
-    //   .when('/about', {
-    //     templateUrl: 'views/about.html',
-    //     controller: 'AboutCtrl',
-    //     controllerAs: 'about'
-    //   })
-    //   .otherwise({
-    //     redirectTo: '/'
-    //   });
-
+  .config(function ($stateProvider) {
 
     $urlRouterProvider.otherwise("/state1");
-    //
+
+
     // Now set up the states
     $stateProvider
       .state('state1', {
@@ -49,6 +35,8 @@ angular
         controller: function($scope) {
           $scope.items = ["A", "List", "Of", "Items"];
         }
+
+
       })
       .state('state2', {
         url: "/state2",
